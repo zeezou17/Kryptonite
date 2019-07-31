@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="hello">Hello World, DevicePolicyDemoActivity!</string>
+    <string name="app_name">Antitheft</string>
+    <string name="enable_device_admin">Enable Device Admin</string>
+    <string name="lock_device">Lock Device</string>
+    <string name="reset_device">Reset Device</string>
+    <string name="device_admin_enabled">Device Admin Enabled</string>
+    <string name="device_admin_disabled">Device Admin Disabled</string>
+    <string name="info">Give administrative rights to this app</string>
+
+
+
+
+   
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="Email">Email</string>
+    <string name="title_activity_main_menu">MainMenu</string>
+    <string name="title_activity_pin_lock">PinLock</string>
+    <string name="EnterPin">Enter the lock pin</string>
+    <string name="Login">Login</string>
+    <string name="PinSetup">Setup pin</string>
+    <string name="title_activity_pin_setup">PinSetup</string>
+    <string name="ConfirmPin">Confirm your pin</string>
+    <string name="ChangePin">Change your pin!</string>
+    <string name="EnterPhoneNo">Enter Your Phone Number</string>
+    <string name="EnterFriendPhoneNo">Enter Your Friends Phone Number( Number for Remote Control Purpose)</string>
+    <string name="EnterYourEmail">Enter Your Email-Id</string>
+    <string name="EnterFriendEmail">Enter Your Friends Email</string>
+    <string name="SubmitInfo">Submit Information</string>
+    <string name="currentOIstring">Your currently entered details</string>
+    <string name="ChangeOIstring">Reset and Change your Information</string>
+
+</resources>

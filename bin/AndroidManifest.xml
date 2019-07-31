@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zero.msgpack1"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="21" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+ 	<uses-permission android:name="android.permission.RECORD_AUDIO" />
+ 	 <uses-permission android:name="android.permission.CAMERA" />
+ 	 <uses-permission android:name="android.permission.READ_CONTACTS"/>
+ 	
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>  
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" 
+        android:manageSpaceActivity="com.zero.msgpack1.ManageSpaceActivity">
+         <activity
+  		  android:name=".ManageSpaceActivity"
+  		  android:screenOrientation="portrait" >
+         </activity>
+         <activity
+            android:name=".PinSetup"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+        </activity>
+        <activity
+            android:name=".PinLock"
+            android:label="@string/app_name" >
+            
+        </activity>
+        <activity
+            android:name=".ChangePin"
+            android:label="@string/app_name" >
+            
+        </activity>
+         <activity 
+            android:name=".UserInfo"
+            android:label="@string/app_name">
+            
+        </activity>
+        <activity 
+            android:name=".ChangeUserInfo"
+            android:label="@string/app_name">
+            
+        </activity>
+         <activity 
+            android:name=".SimChangeMain"
+            android:label="@string/app_name">
+            
+        </activity>
+        <receiver android:name=".CheckSimChangeReceiver" android:exported="true" >
+            <intent-filter android:priority="999" >
+                
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                
+                 <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:name=".SimChangeService" />
+        <activity
+            android:name=".SmsActivity"
+            android:label="@string/app_name" >
+            
+        </activity>
+        <activity
+            android:name=".Faq"
+            android:label="@string/app_name" >
+            
+        </activity>
+        <receiver android:name=".SmsBroadcastReceiver" android:exported="true" >
+            <intent-filter android:priority="998" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+                 <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <activity 
+            android:name=".GpsCalc"
+            android:label="@string/app_name">
+        </activity>
+        <receiver
+            android:name=".DemoDeviceAdminReceiver"
+            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+            <intent-filter>
+
+                <!-- This action is required -->
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+
+            <!-- This is required this receiver to become device admin component. -->
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin_sample" />
+        </receiver>
+        <activity 
+            android:name=".DevicePolicyDemoActivity"
+            android:label="@string/app_name">
+        </activity>
+         <activity
+             android:name=".AlarmSet"
+             android:label="@string/app_name">
+             
+         </activity>
+         <activity
+            android:name=".CameraActivity"
+            android:label="@string/app_name" >
+        </activity>
+        
+        <activity
+            android:name=".CameraView"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".ImgMail"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".BackupMail"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".BackupMain"
+            android:label="@string/app_name" >
+        </activity>
+    </application>
+
+</manifest>
